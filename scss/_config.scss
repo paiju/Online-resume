@@ -2,7 +2,7 @@ $primary-color: rgb(241, 219, 219);
 $secondary-color: rgb(226, 184, 184);
 $background-color: rgb(212, 211, 211);
 $show-home-image: true;
-$home-image: url(../img/background.jpg);
+$home-image: url(../img/notebook.jpg);
 $background-opacity: 0.6;
 
 @mixin easeOut {
@@ -15,6 +15,7 @@ $background-opacity: 0.6;
             background: $home-image;
             background-attachment: fixed;
             background-size: cover;
+            min-height: 100%;
 
             &:after {
                 content:'';
