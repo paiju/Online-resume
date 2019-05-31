@@ -5,7 +5,6 @@
         width: 25%;
         min-height: 0;
     }
-
 }
 
 // Desktops & Laptops
@@ -15,7 +14,6 @@
         width: 25%;
         min-height: 0;
     }
-
 }
 
 // Tablets & Small Laptops
@@ -43,6 +41,14 @@
     .menu-nav {
         transform: translate3d(-100%, 0, 0);
         font-size: 24px;
+    }
+
+    .about-info {
+        grid-template-areas: 
+        'bioimage'
+        'bio';
+
+        grid-template-columns: 1fr;
     }
 }
 // Smartphones
