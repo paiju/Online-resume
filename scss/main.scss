@@ -89,7 +89,6 @@ main {
         'bioimage'
         'bio';   
     grid-template-columns: 1fr;
-    
 
     .bio-image {
         grid-area: bioimage;
@@ -103,10 +102,6 @@ main {
     .bio {
         grid-area: bio;
         font-size: 1.5rem;
-    }
-    
-    .image {
-        grid-area: image;
     }
 }
 

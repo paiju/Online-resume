@@ -166,8 +166,6 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
-  .about-info .image {
-    grid-area: image; }
 
 h5 {
   font-size: 1.5rem;
