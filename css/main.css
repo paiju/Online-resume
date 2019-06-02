@@ -1,0 +1,288 @@
+.menu-btn {
+  position: fixed;
+  z-index: 3;
+  left: 55px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.3s ease-out; }
+  .menu-btn .btn-line {
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    background: #fff;
+    transition: all 0.3s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line {
+      background: #e2b8b8; }
+      .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); }
+      .menu-btn.close .btn-line:nth-child(2) {
+        opacity: 0; }
+      .menu-btn.close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px); }
+
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+
+.menu-nav {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  width: 50%;
+  height: 100vh;
+  overflow: none; }
+
+.menu-nav {
+  margin: 0;
+  padding: 0;
+  background: #ecd1d1;
+  list-style: none;
+  transform: translate3d(0, -100%, 0);
+  transition: all 0.3s ease-out; }
+  .menu-nav.show {
+    transform: translate3d(0, 0, 0); }
+  .menu-nav .portrait {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 150px;
+    background: url("../dist/img/omakuva.png");
+    border-radius: 50%;
+    border: solid 3px #fff; }
+
+.nav-item.current > a {
+  color: #dfa7a7;
+  font-weight: 500; }
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: 300;
+  line-height: 2.5;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease-out; }
+  .nav-link:hover {
+    color: #dfa7a7;
+    font-weight: 500; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #f1dbdb;
+  color: white;
+  height: 100%;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  text-align: left; }
+  body#bg-img {
+    background: url(../img/notebook.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100%; }
+    body#bg-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(212, 211, 211, 0.6); }
+
+h1, h2, h3 {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-weight: 350; }
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 5rem;
+    line-height: 1.15;
+    text-transform: uppercase; }
+  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.5rem 0.3rem;
+    background: rgba(244, 226, 226, 0.5); }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2; }
+
+.text-secondary {
+  color: #e2b8b8; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main .icons {
+    text-align: center;
+    margin-top: 1rem;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    font-weight: 400; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #e2b8b8;
+        transition: all 0.3s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage' 'bio';
+  grid-template-columns: 1fr; }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #f8eded 3px solid;
+    width: 200px;
+    height: 200px; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+
+h5 {
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #e2b8b8; }
+
+h6 {
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1; }
+
+h4 {
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.5; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #e3b6b6;
+  color: set-text-color(#f1dbdb);
+  height: 60px; }
+
+.experience {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'job1 job2 job3';
+  grid-template-columns: repeat(3, 1fr); }
+  .experience .job-1 {
+    grid-area: job1; }
+  .experience .job-2 {
+    grid-area: job2; }
+  .experience .job-3 {
+    grid-area: job3; }
+  .experience .job {
+    background: #f8eded;
+    padding: 0.5rem;
+    border-bottom: #e2b8b8 5px solid; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 4rem; }
+  .boxes div {
+    font-size: 1.7rem;
+    border: 3px #fff solid;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease-out; }
+    .boxes div:hover {
+      padding: 1.5rem 2.5rem;
+      background: #e2b8b8;
+      color: #f1dbdb;
+      border: none; }
+      .boxes div:hover span {
+        color: #fff; }
+
+@media screen and (min-width: 1171px) {
+  .menu-nav {
+    float: none;
+    width: 25%;
+    min-height: 0; }
+  main {
+    align-items: center;
+    text-align: center; }
+    main h1 {
+      width: 100%; }
+    main h2 {
+      width: 100%; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .menu-nav {
+    float: none;
+    width: 25%;
+    min-height: 0; }
+  main {
+    align-items: center;
+    text-align: center; }
+    main h1 {
+      width: 100%; }
+    main h2 {
+      width: 100%; } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main h1 {
+      width: 100%;
+      margin-bottom: 1rem; }
+    main h2 {
+      width: 100%; }
+  .menu-nav {
+    float: none;
+    width: 50%;
+    min-height: 0; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio';
+    grid-template-columns: 1fr; }
+  .experience {
+    grid-template-areas: 'job1' 'job2' 'job';
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  main#about h1 {
+    margin-top: 10vh; } }
